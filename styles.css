@@ -1,0 +1,66 @@
+/* *{
+  border:1px solid black;
+} */
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formHolder{
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+	background: #eae8e8;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #305A72;
+}
+.contact-details{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form{
+  /* display:flex;
+  flex-direction: column; */
+  width: 50vw;
+}
+.salutation{
+  display: flex;
+  flex-direction: row;
+  margin:5px 5px 5px 0px;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+#witness-switch{
+  display: none;
+}
+#attorney-switch{
+  display:none
+}
+.form-control{
+  width:200px;
+}
+
+header{
+  text-align: center;
+}
+.enquiry-info{
+  display: flex;
+}
+.basic-info{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+}
+input{
+  border-radius: 5px;
+  padding: 4px;
+  margin: 5px 0;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Advanced Legal Intake Systems</title>
+</head>
+
+<body>
+  
+  <header>
+    <img src="als_logo.jpeg" alt="advanced legal logo" />
+    <h3>
+      Coding Challenge
+    </h3>
+  </header>
+
+  <div class="formHolder">
+    <section class="contact-details">
+      <form action="" class="contact-form" onsubmit="pabloIsBest()">
+        
+        <h3>Contact Information</h2>
+        <div class="salutation">
+      
+          <label for="salutation"></label>
+          <input type="radio" name="salutation" value="Dr."> Dr.<br>
+          <input type="radio" name="salutation" value="Mr.">Mr. <br>
+          <input type="radio" name="salutation" value="Miss"> Miss<br>
+          <input type="radio" name="salutation" value="Ms.">Ms. <br>
+          <input type="radio" name="salutation" value=" Mx."> Mx.<br>
+        </div>
+
+        <div class="basic-info">
+        <label for="">First Name</label>
+        <input type="text" class="form-control" required />
+        <label for="">Last Name</label>
+        <input type="text" class="form-control" required />
+        <label for="">Address</label>
+        <input type="city" class="form-control" required />
+        <label for="">City</label>
+        <input type="text" class="form-control" required />
+        <label for="">State</label>
+        <input type="text" class="form-control" required />
+        <label for="">Zip</label>
+        <input type="text" class="form-control" required />
+        <label for="">Phone</label>
+        <input type="number" class="form-control" required />
+        <label for="">Email</label>
+        <input type="email" class="form-control" required />
+      </div>
+    </section>
+
+    <section class="enquiry-info">
+      <div class="flex">
+        <label for="">Who?</label>
+        <input type="text" class="form-control" required />
+        <label for="">What?</label>
+        <input type="text" class="form-control" maxlength="2000" required />
+        <label for="">Where?</label>
+        <input type="text" class="form-control" placeholder="City" required />
+        <input type="text" class="form-control" placeholder="State" required />
+        <input type="date" id="theDate" required>
+      </div>
+    </section>
+
+    <section class="attorney-details">
+      <label for="">Do you have a witness?</label>
+
+      <div>
+        <input type="checkbox" id="witness-checkbox" onclick="witnessChecker()" value="witnessChecked">
+      </div>
+
+      <div id="witness-switch">
+        <label for="">What is their first name?</label>
+        <input type="text" class="form-control" required />
+        <label for="">What is their last name?</label>
+        <input type="text" class="form-control" required />
+        <label for="">What is their phone number?</label>
+        <input type="text" class="form-control" required />
+
+      </div>
+      <label for="">Do you have an attorney?</label>
+
+      <div>
+        <input type="checkbox" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">
+      </div>
+
+      <div id="attorney-switch">
+        <label for="">What is your attorney's name?</label>
+        <input type="text" class="form-control" required />
+        <label for="">What is the name of the company they work for?</label>
+        <input type="text" class="form-control" required />
+        <label for="">What is the companies website address?</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <input type="submit" value="Submit">
+      </form>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
