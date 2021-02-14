@@ -11,6 +11,7 @@ if (day < 10) day = "0" + day;
 let today = year + "-" + month + "-" + day;
 document.getElementById("theDate").value = today;
 
+
 function witnessChecker() {
   let witnessDiv = document.getElementById("witness-switch");
   if (document.getElementById("witness-checkbox").checked) {
