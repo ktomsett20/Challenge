@@ -76,15 +76,51 @@
 
     <section class="inquiry-info">
       <label for="witnessCheckbox">Do you have a witness?</label>
-      <span><label for="Yes">Yes</label><input type="radio" class="form-control" onclick="witnessChecker(event)"
-          name="witnessCheckbox" value="Yes"></span>
-      <span><label for="No">No</label><input type="radio" class="form-control" onclick="witnessChecker(event)" name="witnessCheckbox" value="No"></span>
-
+      <div>
+        <span>
+          <label for="Yes">Yes</label>
+          <input 
+          type="radio"
+          class="form-control"
+          onclick="witnessChecker(event)"
+          name="witnessCheckbox"
+          value="Yes">
+        </span>
+        <span>
+          <label for="No">No</label>
+          <input 
+          type="radio"
+          class="form-control"
+          onclick="witnessChecker(event)"
+          name="witnessCheckbox"
+          value="No"
+          >
+        </span>
+      </div>
       <div id="witnessSwitch"></div>
 
       <label for="">Do you have an attorney?</label>
       <div>
-        <input type="radio" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">Yes
+        <span>
+          <label for="Yes">Yes</label>
+          <input 
+            type="radio" 
+            class="form-control"
+            onclick="attorneyChecker()"
+            name="attorneyCheckbox"
+            value="Yes"
+          >
+        </span>
+        <span>
+        <label for="No">No</label>
+        <input 
+          type="radio" 
+          class="form-control"
+          onclick="attorneyChecker()"
+          name="attorneyCheckbox"
+          value="No"
+        >
+        </span>
       </div>
 
       <div id="attorneySwitch">

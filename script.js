@@ -3,15 +3,20 @@ todaysDate();
 let language = document.querySelector("html").lang
 console.log(language)
 
+// ***
+// Function Goal: If client has a witness appends questions to div
+// Params: Expects event data to pull target to modify
+// ***
+
 function witnessChecker(event) {
   let witnessDiv = document.getElementById("witnessSwitch");
-  console.log(witnessDiv)
   let questions =`<label for="">What is their first name?</label>
   <input type="text" name="witnessFirstName" class="form-control" required />
   <label for="">What is their last name?</label>
   <input type="text" name="witnessLastname" class="form-control" required />
   <label for="">What is their phone number?</label>
   <input type="text" name="witnessPhone" class="form-control" required />`
+
   if(language ==="es"){
     questions=``
   }
@@ -25,7 +30,11 @@ function witnessChecker(event) {
   }
 }
 
-function lawyerChecker(event) {
+// ***
+// Function Goal: If client has an attorney appends questions to div
+// Params: Expects event data to pull target to modify
+// ***
+function attorneyChecker(event) {
   let lawyerDiv = document.getElementById("attorney-switch");
   let questions = `<label for="">What is your attorney's name?</label>
   <input type="text" name="attorneyName" class="form-control" value=" "  required />
