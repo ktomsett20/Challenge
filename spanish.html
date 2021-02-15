@@ -21,38 +21,39 @@
   <div class="formHolder">
 
     <section class="contact-details">
-      <form action="" class="contact-form" onsubmit="pabloIsBest()">
+      <form action="" class="contact-form" onsubmit="submitHandler(event)">
         <div class="informationCard">
           <h3>Informacion de Contacto</h3>
           <div class="salutation">
-            <label for="salutation"></label>
-            <input type="radio" name="salutation" value="Dr."> Dr.<br>
-            <input type="radio" name="salutation" value="Mr."> Sr. <br>
-            <input type="radio" name="salutation" value="Miss"> Srta<br>
-            <input type="radio" name="salutation" value="Ms.">Sra. <br>
-            <input type="radio" name="salutation" value=" Mx."> Mx.<br>
+          <label for="salutation">Salutation:</label>
+          <select name="salutation" id="salutation" required>
+            <option value="Mr.">Sr.</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Miss">Srta.</option>
+            <option value="Ms.">Sra.</option>
+            <option value="Mx.">Mx.</option>
+          </select>
           </div>
-
           <label for="first name">Primer Nombre</label>
-          <input type="text" class="form-control" required />
+          <input type="text" class="form-control" name="first-name" required />
           <label for="last name">Apellido</label>
-          <input type="text" class="form-control" required />
+          <input type="text" class="form-control" name="last-name" required />
           <label for="phone">Teléfono</label>
-          <input type="number" class="form-control" required />
+          <input type="number" class="form-control"  name="phone" required />
           <label for="email">Correo electrónico</label>
-          <input type="email" class="form-control" required />
+          <input type="email" class="form-control" name="email" required />
         </div>
         
         <div class="informationCard">
           <h3>Dirección de Contacto</h3>
           <label for="" id="address">Dirección</label>
-          <input type="city" class="form-control" required />
+          <input type="city" class="form-control" name="address" required />
           <label for="">Ciudad</label>
-          <input type="text" class="form-control" required />
+          <input type="text" class="form-control" name="city"  required />
           <label for="">Estado</label>
-          <input type="text" class="form-control" required />
+          <input type="text" class="form-control" name="state" required />
           <label for="">Código postal</label>
-          <input type="text" class="form-control" required />
+          <input type="text" class="form-control" name="zip" required />
         </div>
 
     </section>
@@ -61,47 +62,48 @@
       <h3>Preguntas de investigación</h3>
       <div class="inquiry-questions">
         <label for="">¿Quién?</label>
-        <input type="text" class="form-control" required ></textarea>
+        <input type="text" class="form-control" name="who" required ></textarea>
         <label for="">¿Que?</label>
-        <textarea type="text" class="form-control"rows="5" cols="5" max="2000" required > </textarea>
+        <textarea type="text" class="form-control" name="what" rows="5" cols="5" max="2000" required placeholder="Maximo 2000 Letras"></textarea>
       </div>
       <div class="inquiry-where"></div>
         <label for="">¿Donde?</label>
-        <input type="text" class="form-control" placeholder="Ciudad" required />
-        <input type="text" class="form-control" placeholder="Estado" required />
+        <input type="text" class="form-control" name="inquiryCity" placeholder="Ciudad" required />
+        <input type="text" class="form-control" name="inquiryState" placeholder="Estado" required />
         <input type="date" id="theDate" required>
-      
     </section>
 
     <section class="inquiry-info">
       <label for=""><strong>¿Tienes un testigo?</strong></label>
 
       <div>
+        Si
         <input type="checkbox" id="witness-checkbox" onclick="witnessChecker()" value="witnessChecked">
       </div>
-
+      
       <div id="witness-switch">
         <label for="">¿Cual es su primer nombre?</label>
-        <input type="text" class="form-control" required />
+        <input type="text" name="witnessFirstName" class="form-control" value=" "  required />
         <label for="">¿Cual es su apellido?</label>
-        <input type="text" class="form-control" required />
+        <input type="text" name="witnessLastname" class="form-control" value=" " required />
         <label for="">¿Cual es su numero de telefono?</label>
-        <input type="text" class="form-control" required />
+        <input type="text"name="witnessPhone" class="form-control" value=" "  required />
 
       </div>
 
       <label for=""><strong>¿Tienes abogada/abogado?</strong></label>
       <div>
+        Si
         <input type="checkbox" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">
       </div>
 
       <div id="attorney-switch">
         <label for="">¿Como se llama tu abogada/abogado?</label>
-        <input type="text" class="form-control" required />
+        <input type="text" name="attorneyName" class="form-control" value=" " required />
         <label for="">¿Cuál es el nombre de la compania donde trabajan?</label>
-        <input type="text" class="form-control" required />
+        <input type="text" name="attorneyCompany" class="form-control" value=" " required />
         <label for="">¿Cuál es la dirección del sitio web de la compania?</label>
-        <input type="text" class="form-control" required />
+        <input type="text" name="attorneySite" class="form-control" value=" " required />
       </div>
       <input type="submit" value="Someter">
       </form>

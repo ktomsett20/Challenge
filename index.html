@@ -13,47 +13,47 @@
 
   <header>
     <img src="als_logo.jpeg" alt="advanced legal logo" />
-    
+
   </header>
   <a href='spanish.html'>
-    <button >Traducción a español</button>
+    <button>Traducción a español</button>
   </a>
 
   <div class="formHolder">
 
     <section class="contact-details">
-      <form action="" class="contact-form" onsubmit="pabloIsBest()">
+      <form action="" class="contact-form" onsubmit="submitHandler(event)">
         <div class="informationCard">
           <h3>Contact Information</h3>
           <div class="salutation">
-            <label for="salutation"></label>
-            <input type="radio" name="salutation" value="Dr."> Dr.<br>
-            <input type="radio" name="salutation" value="Mr.">Mr. <br>
-            <input type="radio" name="salutation" value="Miss"> Miss<br>
-            <input type="radio" name="salutation" value="Ms.">Ms. <br>
-            <input type="radio" name="salutation" value=" Mx."> Mx.<br>
+            <label for="salutation">Salutation:</label>
+            <select name="salutation" id="salutation" required>
+              <option value="Mr.">Mr.</option>
+              <option value="Dr.">Dr.</option>
+              <option value="Miss">Miss</option>
+              <option value="Ms.">Ms.</option>
+            </select>
           </div>
-
-          <label for="first name">First Name</label>
-          <input type="text" class="form-control" required />
-          <label for="last name">Last Name</label>
-          <input type="text" class="form-control" required />
+          <label for="first-name">First Name</label>
+          <input type="text" class="form-control" name="first-name" required />
+          <label for="last-name">Last Name</label>
+          <input type="text" class="form-control" name="last-name" required />
           <label for="phone">Phone</label>
-          <input type="number" class="form-control" required />
+          <input type="number" class="form-control" name="phone" required />
           <label for="email">Email</label>
-          <input type="email" class="form-control" required />
+          <input type="email" class="form-control" name="email" required />
         </div>
-        
+
         <div class="informationCard">
           <h3>Contact Address</h3>
-          <label for="" id="address">Address</label>
-          <input type="city" class="form-control" required />
-          <label for="">City</label>
-          <input type="text" class="form-control" required />
-          <label for="">State</label>
-          <input type="text" class="form-control" required />
-          <label for="">Zip</label>
-          <input type="text" class="form-control" required />
+          <label for="address" id="address">Address</label>
+          <input type="city" class="form-control" name="address" required />
+          <label for="city">City</label>
+          <input type="text" class="form-control" name="city" required />
+          <label for="state">State</label>
+          <input type="text" class="form-control" name="state" required />
+          <label for="Zip">Zip</label>
+          <input type="text" class="form-control" name="zip" required />
         </div>
 
     </section>
@@ -61,48 +61,34 @@
     <section class="inquiry-info">
       <h3>Inquiry Questions</h3>
       <div class="inquiry-questions">
-        <label for="">Who?</label>
-        <input type="text" class="form-control" required ></textarea>
-        <label for="">What?</label>
-        <textarea type="text" class="form-control"rows="5" cols="5" max="2000" required > </textarea>
+        <label for="who">Who?</label>
+        <input type="text" class="form-control" name="who" required></textarea>
+        <label for="What">What?</label>
+        <textarea type="text" class="form-control" rows="5" col="5" maxlength="2000" name="what" required
+          placeholder="Max 2000 Characters"></textarea>
       </div>
       <div class="inquiry-where"></div>
-        <label for="">Where?</label>
-        <input type="text" class="form-control" placeholder="City" required />
-        <input type="text" class="form-control" placeholder="State" required />
-        <input type="date" id="theDate" required>
-      
+      <label for="Where">Where?</label>
+      <input type="text" class="form-control" placeholder="City" name="inquiryCity" required />
+      <input type="text" class="form-control" placeholder="State" name="inquiryState" required />
+      <input type="date" id="theDate" required>
     </section>
 
     <section class="inquiry-info">
-      <label for="">Do you have a witness?</label>
+      <label for="witnessCheckbox">Do you have a witness?</label>
+      <span><label for="Yes">Yes</label><input type="radio" class="form-control" onclick="witnessChecker(event)"
+          name="witnessCheckbox" value="Yes"></span>
+      <span><label for="No">No</label><input type="radio" class="form-control" onclick="witnessChecker(event)" name="witnessCheckbox" value="No"></span>
 
-      <div>
-        <input type="checkbox" id="witness-checkbox" onclick="witnessChecker()" value="witnessChecked">
-      </div>
-
-      <div id="witness-switch">
-        <label for="">What is their first name?</label>
-        <input type="text" class="form-control" required />
-        <label for="">What is their last name?</label>
-        <input type="text" class="form-control" required />
-        <label for="">What is their phone number?</label>
-        <input type="text" class="form-control" required />
-
-      </div>
+      <div id="witnessSwitch"></div>
 
       <label for="">Do you have an attorney?</label>
       <div>
-        <input type="checkbox" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">
+        <input type="radio" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">Yes
       </div>
 
-      <div id="attorney-switch">
-        <label for="">What is your attorney's name?</label>
-        <input type="text" class="form-control" required />
-        <label for="">What is the name of the company they work for?</label>
-        <input type="text" class="form-control" required />
-        <label for="">What is the companies website address?</label>
-        <input type="text" class="form-control" required />
+      <div id="attorneySwitch">
+  
       </div>
       <input type="submit" value="Submit">
       </form>
