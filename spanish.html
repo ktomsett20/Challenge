@@ -15,17 +15,17 @@
     <img src="als_logo.jpeg" alt="advanced legal logo" />
     
   </header>
-  <a href='index.html'>
+  <a href='index.html' >
     <button >Translate to English</button>
   </a>
-  <div class="formHolder">
+  <div class="formHolder" id="replaceForm">
 
     <section class="contact-details">
       <form action="" class="contact-form" onsubmit="submitHandler(event)">
         <div class="informationCard">
           <h3>Informacion de Contacto</h3>
           <div class="salutation">
-          <label for="salutation">Salutation:</label>
+          <label for="salutation">Título  :</label>
           <select name="salutation" id="salutation" required>
             <option value="Mr.">Sr.</option>
             <option value="Dr.">Dr.</option>
@@ -74,38 +74,57 @@
     </section>
 
     <section class="inquiry-info">
-      <label for=""><strong>¿Tienes un testigo?</strong></label>
+      <label for="witnessCheckbox">¿Tiene un testigo?</label>
+    <div>
+      <span>
+        <label for="Yes">Si</label>
+          <input 
+          type="radio"
+          class="form-control"
+          onclick="witnessChecker(event)"
+          name="witnessCheckbox"
+          value="Yes">
+        </span>
+        <span>
+          <label for="No">No</label>
+          <input 
+          type="radio"
+          class="form-control"
+          onclick="witnessChecker(event)"
+          name="witnessCheckbox"
+          value="No"
+          >
+        </span>
+      </div>
+      <div id="witnessSwitch"></div>
 
+      <label for="attorneyCheckbox">¿Tiene abogada/abogado?</label>
       <div>
-        Si
-        <input type="checkbox" id="witness-checkbox" onclick="witnessChecker()" value="witnessChecked">
+        <span>
+          <label for="Yes">Si</label>
+          <input 
+            type="radio" 
+            class="form-control"
+            onclick="attorneyChecker(event)"
+            name="attorneyCheckbox"
+            value="Yes"
+          >
+        </span>
+        <span>
+        <label for="No">No</label>
+        <input 
+          type="radio" 
+          class="form-control"
+          onclick="attorneyChecker(event)"
+          name="attorneyCheckbox"
+          value="No"
+        >
+        </span>
       </div>
       
-      <div id="witness-switch">
-        <label for="">¿Cual es su primer nombre?</label>
-        <input type="text" name="witnessFirstName" class="form-control" value=" "  required />
-        <label for="">¿Cual es su apellido?</label>
-        <input type="text" name="witnessLastname" class="form-control" value=" " required />
-        <label for="">¿Cual es su numero de telefono?</label>
-        <input type="text"name="witnessPhone" class="form-control" value=" "  required />
-
-      </div>
-
-      <label for=""><strong>¿Tienes abogada/abogado?</strong></label>
-      <div>
-        Si
-        <input type="checkbox" id="attorney-checkbox" onclick="lawyerChecker()" value="lawyerChecked">
-      </div>
-
-      <div id="attorney-switch">
-        <label for="">¿Como se llama tu abogada/abogado?</label>
-        <input type="text" name="attorneyName" class="form-control" value=" " required />
-        <label for="">¿Cuál es el nombre de la compania donde trabajan?</label>
-        <input type="text" name="attorneyCompany" class="form-control" value=" " required />
-        <label for="">¿Cuál es la dirección del sitio web de la compania?</label>
-        <input type="text" name="attorneySite" class="form-control" value=" " required />
-      </div>
-      <input type="submit" value="Someter">
+      <div id="attorneySwitch"></div>
+      
+      <input type="submit" value="Enviar">
       </form>
     </section>
   </div>

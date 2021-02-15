@@ -12,14 +12,13 @@
 <body>
 
   <header>
-    <img src="als_logo.jpeg" alt="advanced legal logo" />
+    <img src="als_logo.jpeg" alt="advanced legal logo" />'
 
   </header>
   <a href='spanish.html'>
     <button>Traducción a español</button>
   </a>
-
-  <div class="formHolder">
+  <div class="formHolder" id="replaceForm">
 
     <section class="contact-details">
       <form action="" class="contact-form" onsubmit="submitHandler(event)">
@@ -96,17 +95,18 @@
           value="No"
           >
         </span>
+        <div id="witnessSwitch"></div>
       </div>
-      <div id="witnessSwitch"></div>
+     
 
-      <label for="">Do you have an attorney?</label>
+      <label for="attorneyCheckbox">Do you have an attorney?</label>
       <div>
         <span>
           <label for="Yes">Yes</label>
           <input 
             type="radio" 
             class="form-control"
-            onclick="attorneyChecker()"
+            onclick="attorneyChecker(event)"
             name="attorneyCheckbox"
             value="Yes"
           >
@@ -116,7 +116,7 @@
         <input 
           type="radio" 
           class="form-control"
-          onclick="attorneyChecker()"
+          onclick="attorneyChecker(event)"
           name="attorneyCheckbox"
           value="No"
         >
@@ -126,9 +126,10 @@
       <div id="attorneySwitch">
   
       </div>
-      <input type="submit" value="Submit">
-      </form>
-    </section>
+      </section>
+      <input type="submit" value="submit">
+    </form>
+    
   </div>
   <script src="script.js"></script>
 </body>
