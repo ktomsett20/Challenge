@@ -6,128 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Advanced Legal Intake Systems</title>
+  <title>Harry's Calculator</title>
 </head>
 
 <body>
-
-  <header>
-    <img src="als_logo.jpeg" alt="advanced legal logo" />'
-
-  </header>
-  <a href='spanish.html'>
-    <button>Traducción a español</button>
-  </a>
-  <div class="formHolder" id="replaceForm">
+    <div class="formHolder" id="replaceForm">
 
       <form action="" class="contact-form" onsubmit="submitHandler(event)">
         <section class="contact-details">
           <div class="informationCard">
-            <h3>Contact Information</h3>
-              <div class="salutation">
-            <label for="salutation">Salutation:</label>
-            <select name="salutation" id="salutation" required>
-              <option value="Mr.">Mr.</option>
-              <option value="Dr.">Dr.</option>
-              <option value="Miss">Miss</option>
-              <option value="Ms.">Ms.</option>
-            </select>
-          </div>
-          <label for="first-name">First Name</label>
-          <input type="text" class="form-control" name="first-name" required />
-          <label for="last-name">Last Name</label>
-          <input type="text" class="form-control" name="last-name" required />
-          <label for="phone">Phone</label>
-          <input type="number" class="form-control" name="phone" required />
-          <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" required />
+            <h3>Porfolio Tracker</h3>
+             <label for="start">Starting Monthly Value</label>
+          <input type="number" class="form-control" name="start-monthly-value" required />
+          </div><br>
+          <label for="Ammount">Harry's Starting Value</label>
+          <input type="number" class="form-control" name="contra" required /> 
+          <br><br>
+          <label for="Name">Client 1</label>
+          <label for="Ammount">Contrabution Ammount</label>
+          <input type="number" class="form-control" name="contra2" required />
+          <br><br>
+          <label for="Name">Client 2</label>
+          <label for="Ammount">Contrabution Ammount</label>
+          <input type="number" class="form-control" name="contra3" required />
+
+          <br><br>
+          <label for="Name">Client 2</label>
+          <label for="Ammount">Contrabution Ammount</label>
+          <input type="number" class="form-control" name="contra4" required />
+          </section>
+        <div class="results">
+           <div class="informationCard">
+            <h3>Porfolio Tracker</h3>
+             <label for="start">Ending Monthly Value</label>
+          <input type="number" class="results-control" name="start-monthly-value" required />
+          </div><br>
+          <label for="Ammount">Harry's Ending Value</label>
+          <input type="number" class="results-control" name="result"  /> 
+          <br><br>
+          <label for="Name">Client 1</label>
+          <label for="Ammount">New Portion Value Ammount</label>
+          <input type="number" class="results-control" name="result2"  />
+          <br><br>
+          <label for="Name">Client 2</label>
+          <label for="Ammount">New Portion Value Ammount</label>
+          <input type="number" class="results-control" name="result3"  />
+          <br><br>
+          <label for="Name">Client 3</label>
+          <label for="Ammount">New Portion Value Ammount</label>
+          <input type="number" class="results-control" name="result4"  />
         </div>
-
-        <div class="informationCard">
-          <h3>Contact Address</h3>
-          <label for="address" id="address">Address</label>
-          <input type="city" class="form-control" name="address" required />
-          <label for="city">City</label>
-          <input type="text" class="form-control" name="city" required />
-          <label for="state">State</label>
-          <input type="text" class="form-control" name="state" required />
-          <label for="Zip">Zip</label>
-          <input type="text" class="form-control" name="zip" required />
+       
         </div>
-
-    </section>
-
-    <section class="inquiry-info">
-      <h3>Inquiry Questions</h3>
-      <div class="inquiry-questions">
-        <label for="who">Who?</label>
-        <input type="text" class="form-control" name="who" required></textarea>
-        <label for="What">What?</label>
-        <textarea type="text" class="form-control" rows="5" col="5" maxlength="2000" name="what" required
-          placeholder="Max 2000 Characters"></textarea>
-      </div>
-      <div class="inquiry-where"></div>
-      <label for="Where">Where?</label>
-      <input type="text" class="form-control" placeholder="City" name="inquiryCity" required />
-      <input type="text" class="form-control" placeholder="State" name="inquiryState" required />
-      <input type="date" id="theDate" required>
-    </section>
-
-    <section class="inquiry-info">
-      <label for="witnessCheckbox">Do you have a witness?</label>
-      <div>
-        <span>
-          <label for="Yes">Yes</label>
-          <input 
-          type="radio"
-          class="form-control"
-          onclick="witnessChecker(event)"
-          name="witnessCheckbox"
-          value="Yes">
-        </span>
-        <span>
-          <label for="No">No</label>
-          <input 
-          type="radio"
-          class="form-control"
-          onclick="witnessChecker(event)"
-          name="witnessCheckbox"
-          value="No"
-          >
-        </span>
-        <div id="witnessSwitch"></div>
-      </div>
-     
-
-      <label for="attorneyCheckbox">Do you have an attorney?</label>
-      <div>
-        <span>
-          <label for="Yes">Yes</label>
-          <input 
-            type="radio" 
-            class="form-control"
-            onclick="attorneyChecker(event)"
-            name="attorneyCheckbox"
-            value="Yes"
-          >
-        </span>
-        <span>
-        <label for="No">No</label>
-        <input 
-          type="radio" 
-          class="form-control"
-          onclick="attorneyChecker(event)"
-          name="attorneyCheckbox"
-          value="No"
-        >
-        </span>
-      </div>
-
-      <div id="attorneySwitch">
-      </div>
-      </section>
-      <input type="submit" value="submit">
-    </form>
+        
+    <input type="submit" value="submit">
+       
     
   </div>
   <script src="script.js"></script>
