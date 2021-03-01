@@ -14,8 +14,8 @@ function submitHandler(event) {
   const profit=endingValue-startingValue;
   resultsStuff[1].value = (harryValue/startingValue)*profit+harryValue
   resultsStuff[2].value = ((clientOne/startingValue)*profit)*.70+clientOne
-  resultsStuff[3].value = ((clientTwo/startingValue)*profit)*.70+clientOne
-  resultsStuff[4].value =((clientThree/startingValue)*profit)*.70+clientOne
+  resultsStuff[3].value = ((clientTwo/startingValue)*profit)*.70+clientTwo
+  resultsStuff[4].value =((clientThree/startingValue)*profit)*.70+clientThree
 
 
 }
